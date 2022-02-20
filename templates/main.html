@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles.css') }}">
+    <title>Fake News</title>
+</head>
+<body>
+    <div class="center">
+        <form action="{{ url_for('main') }}" method="POST">
+            <div id="input">
+                <h1>Fake News Finder</h1>
+                <div class="inputbox">
+                    <input name='url'>
+                    <span>URL</span>
+                  </div>
+                <div class="inputbox">
+                    <input type="submit" value="submit" required="required"> 
+                </div>
+            </div>
+        </form>
+        
+        <div id="result">
+            Result:
+                <p>{{ result1 }}</p>
+                <p>{{ result2 }}</p>
+        </div>
+    </div>
+</body>
+</html>
